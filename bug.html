@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Uncommon HTML Error</title>
+</head>
+<body>
+  <p>This is a paragraph.</p>
+  <div id="myDiv"></div>
+
+  <script>
+    // Trying to access a non-existent attribute
+    let x = document.getElementById("myDiv").getAttribute("nonExistent");
+    console.log(x); // Output: null
+
+    //Incorrect use of the innerHTML property
+    document.getElementById("myDiv").innerHTML = "<p>This is a paragraph.<p>";
+
+    //Missing closing tags
+    document.getElementById("myDiv").innerHTML = "<p>This is a paragraph";
+
+    //Incorrect nesting of elements
+    document.getElementById("myDiv").innerHTML = "<p>This is a paragraph</p><h1>This is a heading</h1>";
+
+  </script>
+</body>
+</html>
