@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Uncommon HTML Error Solution</title>
+</head>
+<body>
+  <p>This is a paragraph.</p>
+  <div id="myDiv"></div>
+
+  <script>
+    //Check if the attribute exists before accessing it
+    let div = document.getElementById("myDiv");
+    if (div.hasAttribute("nonExistent")) {
+      let x = div.getAttribute("nonExistent");
+      console.log(x);
+    } else {
+      console.log("Attribute does not exist");
+    }
+
+    //Correct use of innerHTML
+    document.getElementById("myDiv").innerHTML = "<p>This is a paragraph.</p>";
+
+    //Correct use of innerHTML with proper closing tags
+    document.getElementById("myDiv").innerHTML += "<p>Another paragraph.</p>";
+
+    //Correct nesting of elements
+    document.getElementById("myDiv").innerHTML += "<h1>This is a heading</h1>";
+  </script>
+</body>
+</html>
